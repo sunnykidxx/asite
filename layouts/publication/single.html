@@ -1,7 +1,11 @@
 {{- define "main" -}}
+
 <div class="pub">
+
   {{ partial "page_header.html" . }}
+
   <div class="article-container">
+
     {{ if .Params.abstract }}
     <h3>{{ i18n "abstract" }}</h3>
     <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
@@ -27,6 +31,7 @@
     </div>
     <div class="d-md-none space-below"></div>
     {{ end }}
+
     {{ if .Params.publication }}
     <div class="row">
       <div class="col-md-1"></div>
@@ -40,9 +45,13 @@
     </div>
     <div class="d-md-none space-below"></div>
     {{ end }}
+
     <div class="space-below"></div>
+
     <div class="article-style">{{ .Content }}</div>
+
     {{ partial "page_footer" . }}
+
   </div>
 </div>
 {{- end -}}
